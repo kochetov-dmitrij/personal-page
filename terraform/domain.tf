@@ -4,6 +4,7 @@ data "cloudflare_accounts" "all" {
 
 resource "cloudflare_zone" "kek-kochetov-dev" {
   zone = "kek.kochetov.dev"
+  account_id = var.cloudflare_account_id
 }
 
 resource "cloudflare_record" "cname-lol" {
