@@ -1,0 +1,27 @@
+name: Ansible
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  run-all:
+    name: Run all playbooks (site.yaml)
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Save personal_page key to a local file
+        run: |
+          echo "${{ secrets.PERSONAL_PAGE_PRIVATE_KEY }}" > keys/personal_page
+          chmod 600 keys/ansible_rsa
+#      - name: Install ansible galaxy roles
+#        working-directory: ansible
+#        run: |
+#          ansible-galaxy install -r requirements.yml
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          directory: ansible
+          playbook: site.yml
