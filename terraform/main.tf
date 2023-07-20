@@ -7,6 +7,10 @@ terraform {
   }
 
   required_providers {
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.10.0"
+    }
     digitalocean = {
       source = "digitalocean/digitalocean"
       version = "~> 2.29.0"
@@ -16,10 +20,12 @@ terraform {
   required_version = "~> 1.5.3"
 }
 
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
+}
 provider "digitalocean" {
   token = var.do_token
 }
-
 resource "digitalocean_project" "personal_page" {
   name        = "personal-page"
   description = "A project for kochetov.dev personal page"
