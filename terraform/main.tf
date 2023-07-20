@@ -1,5 +1,5 @@
 terraform {
-  backend "remote" {
+  cloud {
     organization = "dkochetov"
     workspaces {
       name = "personal-page"
@@ -16,7 +16,10 @@ terraform {
 }
 
 provider "scaleway" {
-  # Defaults to europe-west3
+  access_key      = var.scaleway_access_key
+  secret_key      = var.scaleway_secret_key
+  organization_id = var.scaleway_organization_id
+  project_id      = var.scaleway_project_id
   region = "nl-ams"
   zone   = "nl-ams-1"
 }
