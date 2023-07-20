@@ -3,7 +3,7 @@ data "cloudflare_accounts" "all" {
 }
 
 data "cloudflare_zone" "kochetov-dev" {
-  zone = "kochetov.dev"
+  name = "kochetov.dev"
 }
 
 resource "cloudflare_record" "cname-apex" {
