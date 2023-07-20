@@ -1,0 +1,7 @@
+- name: Configure personal page VM
+  hosts: personal_page
+  gather_facts: yes
+  roles:
+    - apt_cache
+    - terminal_tools
+    - nginx

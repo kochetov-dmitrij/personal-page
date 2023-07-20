@@ -1,0 +1,8 @@
+- name: "Installing common packages"
+  block:
+    - name: "Installing vim, tmux"
+      apt:
+        name:
+          - vim
+          - tmux
+        state: present

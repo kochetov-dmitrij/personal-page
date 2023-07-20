@@ -25,5 +25,5 @@ ansible-playbook site.yml
 
 Or only specific one:
 ```
-ansible-playbook playbook_compose.yml
+ansible-playbook playbook_personal_page.yml
 ```

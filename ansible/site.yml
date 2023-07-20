@@ -1,0 +1,2 @@
+# Main playbook contains all others
+- import_playbook: playbook_personal_page.yml
