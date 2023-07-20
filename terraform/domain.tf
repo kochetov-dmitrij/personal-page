@@ -13,7 +13,7 @@ resource "cloudflare_record" "cname-apex" {
   value   = "www.kochetov.dev"
   type    = "CNAME"
   ttl     = 3600
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "cname-www" {
@@ -22,5 +22,5 @@ resource "cloudflare_record" "cname-www" {
   value   = "kochetov-dmitrij.github.io"
   type    = "CNAME"
   ttl     = 3600
-  proxied = true
+  proxied = false
 }
