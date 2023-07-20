@@ -6,20 +6,11 @@ data "cloudflare_zone" "kochetov-dev" {
   name = "kochetov.dev"
 }
 
-resource "cloudflare_record" "cname-apex" {
+resource "cloudflare_record" "a-apex" {
   zone_id = data.cloudflare_zone.kochetov-dev.id
   name    = "@"
-  value   = "www.kochetov.dev"
-  type    = "CNAME"
-  ttl     = 600
-  proxied = false
-}
-
-resource "cloudflare_record" "cname-www" {
-  zone_id = data.cloudflare_zone.kochetov-dev.id
-  name    = "www"
-  value   = "kochetov-dmitrij.github.io"
-  type    = "CNAME"
+  value   = digitalocean_droplet.kochetov-dev.ipv4_address
+  type    = "A"
   ttl     = 600
   proxied = false
 }

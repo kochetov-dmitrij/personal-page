@@ -12,7 +12,7 @@ terraform {
       version = "~> 4.10.0"
     }
     digitalocean = {
-      source = "digitalocean/digitalocean"
+      source  = "digitalocean/digitalocean"
       version = "~> 2.29.0"
     }
   }
@@ -29,4 +29,10 @@ provider "digitalocean" {
 resource "digitalocean_project" "personal_page" {
   name        = "personal-page"
   description = "A project for kochetov.dev personal page"
+}
+resource "digitalocean_project_resources" "barfoo" {
+  project   = digitalocean_project.personal_page.id
+  resources = [
+    digitalocean_droplet.kochetov-dev.urn
+  ]
 }
