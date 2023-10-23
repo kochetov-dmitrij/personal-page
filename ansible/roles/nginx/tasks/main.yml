@@ -17,7 +17,7 @@
   cron:
     name: letsencrypt_renewal_{{item.domain}}
     special_time: weekly
-    job: letsencrypt --renew certonly -n --webroot -w /etc/letsencrypt -m {{letsencrypt_email}} --agree-tos -d {{item.domain}} && service nginx reload
+    job: letsencrypt renew -n --webroot -w /etc/letsencrypt --agree-tos --cert-name {{item.domain}} --post-hook "systemctl reload nginx"
   loop: "{{enforce_https}}"
 
 
@@ -51,5 +51,5 @@
 - name: Reload nginx to activate sites
   service:
     name: nginx
-    state: restarted
+    state: reload
 
