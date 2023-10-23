@@ -5,4 +5,5 @@
         name:
           - vim
           - tmux
+          - git
         state: present
