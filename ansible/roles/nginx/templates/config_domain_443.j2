@@ -5,12 +5,12 @@ add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsaf
 
 server {
     listen 443 ssl spdy;
-    server_name {{item.domain}};
+    server_name {{ domain.name }};
 
     ssl on;
-    ssl_certificate         /etc/letsencrypt/live/{{item.domain}}/fullchain.pem;
-    ssl_certificate_key     /etc/letsencrypt/live/{{item.domain}}/privkey.pem;
-    ssl_trusted_certificate /etc/letsencrypt/live/{{item.domain}}/fullchain.pem;
+    ssl_certificate         /etc/letsencrypt/live/{{ domain.name }}/fullchain.pem;
+    ssl_certificate_key     /etc/letsencrypt/live/{{ domain.name }}/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/{{ domain.name }}/fullchain.pem;
 
     ssl_session_cache shared:SSL:10m;
     ssl_session_timeout 10m;
@@ -23,5 +23,7 @@ server {
     ssl_dhparam /etc/nginx/dhparams.pem;
     ssl_prefer_server_ciphers on;
 
-    {{item.locations}}
+    access_log /var/log/nginx/access.log;
+
+    {{ domain.locations | indent(width=4, first=false) }}
 }

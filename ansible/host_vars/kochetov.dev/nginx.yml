@@ -1,9 +1,19 @@
 letsencrypt_email: d.kochetov98@gmail.com
-enforce_https:
-  - domain: 'kochetov.dev'
 domains:
-  - domain: 'kochetov.dev'
-    locations: >
+  - name: 'kochetov.dev'
+    enforce_https: true
+    locations: |      
+      # location / {
+      #   alias /usr/share/nginx/html/;
+      #   index index.html;
+      # }
       location / {
+        return 302 /cv/dmitrii_kochetov_en1.pdf;
+      }
+      location /gh {
         rewrite ^ https://kochetov-dmitrij.github.io redirect;
+      }
+      location /cv/ {
+        alias /usr/share/nginx/html/cv/;
+        try_files $uri $uri/ =404;
       }

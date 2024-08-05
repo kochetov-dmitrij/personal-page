@@ -1,0 +1,13 @@
+- name: Create letsencrypt directory
+  file:
+    name: /etc/letsencrypt
+    state: directory
+- name: Create letsencrypt certificate
+  shell: letsencrypt certonly -n --webroot -w /etc/letsencrypt -m {{ letsencrypt_email }} --agree-tos -d {{ domain.name }}
+  args:
+    creates: /etc/letsencrypt/live/{{ domain.name }}
+- name: Add letsencrypt cronjob for cert renewal
+  cron:
+    name: letsencrypt_renewal_{{ domain.name }}
+    special_time: weekly
+    job: letsencrypt renew -n --webroot -w /etc/letsencrypt --agree-tos --cert-name {{ domain.name }} --post-hook "systemctl reload nginx"

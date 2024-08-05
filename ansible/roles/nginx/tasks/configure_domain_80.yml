@@ -1,0 +1,9 @@
+- name: Add config on port 80
+  template:
+    src: templates/config_domain_80.j2
+    dest: /etc/nginx/sites-enabled/{{ domain.name }}_80
+  notify:
+    - Reload nginx
+- name: Update new_sites_enabled_paths
+  set_fact:
+    new_sites_enabled_paths: "{{ new_sites_enabled_paths | default([]) + ['/etc/nginx/sites-enabled/' + domain.name + '_80'] }}"

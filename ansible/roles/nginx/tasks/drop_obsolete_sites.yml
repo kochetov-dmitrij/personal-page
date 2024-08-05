@@ -1,0 +1,32 @@
+- name: Print sites-enabled paths
+  ansible.builtin.debug:
+    var: new_sites_enabled_paths
+
+- name: Capture all nginx enabled sites
+  find:
+    paths: /etc/nginx/sites-enabled/
+    file_type: file
+  register: all_sites_enabled_files
+- name: Remember all sites-enabled paths
+  set_fact:
+    all_sites_enabled_paths: "{{ all_sites_enabled_files.files | map(attribute='path') | list }}"
+- name: Print all sites-enabled paths
+  ansible.builtin.debug:
+    var: all_sites_enabled_paths
+
+- name: Get the obsolete sites-enabled paths
+  set_fact:
+    obsolete_sites_enabled_paths: "{{ all_sites_enabled_paths | difference(new_sites_enabled_paths) }}"
+- name: Print obsolete sites-enabled paths
+  ansible.builtin.debug:
+    var: obsolete_sites_enabled_paths
+
+- name: Delete obsolete nginx sites-enabled configs
+  file:
+    path: "{{ path }}"
+    state: absent
+  with_items: "{{ obsolete_sites_enabled_paths }}"
+  loop_control:
+    loop_var: path
+  notify:
+    - Reload nginx

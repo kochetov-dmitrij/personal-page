@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {{item.domain}};
+    server_name {{ domain.name }};
 
     location /.well-known/acme-challenge {
         root /etc/letsencrypt;
@@ -8,6 +8,6 @@ server {
     }
 
     location / {
-        rewrite ^ https://{{item.domain}}$request_uri? permanent;
+        rewrite ^ https://{{ domain.name }}$request_uri? permanent;
     }
 }
