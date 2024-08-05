@@ -1,0 +1,133 @@
+contacts:
+  name: Dmitrii Kochetov
+  title: Senior DevOps Engineer
+  email: d.kochetov98@gmail.com
+  phone: "+995 593145192"
+  address: "Batumi, Georgia"
+  linkedin:
+    url: https://www.linkedin.com/in/dkochetov98/
+    displayText: dkochetov98
+  github:
+    url: https://github.com/kochetov-dmitrij
+    displayText: kochetov-dmitrij
+  website:
+    url: https://kochetov.dev
+    displayText: kochetov.dev
+
+skills:
+  - name: DevOps
+    items:
+      - Docker
+      - Kubernetes Administration
+      - Github Actions, Gitlab CI
+      - Terraform
+      - Ansible
+  - name: Scripting and Programming
+    items:
+      - GoLang
+      - Python
+      - Bash
+      - Advanced ds and algorithms
+  - name: Software Development
+    items:
+      - Git
+      - Design Patterns
+      - Agile
+      - Scrum
+  - name: Data Analysis
+    items:
+      - Data Visualization
+      - SQL
+      - Spark
+  - name: Cloud Computing
+    items:
+      - AWS
+      - Google Cloud
+      - Azure
+      - IBM Cloud
+  - name: Database Managment
+    items:
+      - PostgreSQL
+      - MongoDB
+      - Neo4j
+      - Elasticsearch
+      - Kafka
+  - name: Monitoring
+    items:
+      - ELK stack
+      - Prometheus
+      - Grafana
+      - Loki
+      - Alerts
+  - name: Languages
+    items:
+      - English C1
+      - Russian Native
+
+summary:
+  Skilled and dedicated DevOps Engineer with 5 years of experience in automating, optimizing, managing and securing mission-critical deployments in AWS, GCP, Azure and IBM clouds.
+  Proficient in CI/CD pipeline development, configuration management, and infrastructure as code (IaC). 
+  Strong background in scripting and programming with tools such as Terraform, Ansible, Docker, and Kubernetes.
+  Open to roles ranging from software engineering to infrastructure.
+
+
+jobs:
+  - position: DevOps Engineer
+    company:
+      name: Schwarzthal Tech
+      link: https://schwarzthal.tech
+    description:
+      - Responsible for maintaining and improving cloud infrastructure in multiple public clouds using IaC tools.
+      - Developing mission-critical microservices in Go and Python.
+      - Had some experience with Ruby, Java, JS codebases.
+      - Developed custom operators for K8s for optimising large scale crawling process.
+      - Managed large self-hosted databases (Mongodb, Neo4j, ElasticSearch).
+      - Managed data crawlers (Scrapy) and data pipelines (Airflow, Spark).
+      - Collaborated with cross-functional teams, including data scientists and software engineers.
+      - Mentored and supervised a team, including two former interns who transitioned to full-time roles, fostering their growth and enhancing team productivity.
+      - Established comprehensive monitoring and alerting solutions, significantly improving system reliability and minimizing downtime.
+      - Implemented DevOps best practices in the team to uphold code quality, delivery speed and reliability.
+      - Optimised cloud costs by 20%.
+    from: "2020 Jun."
+    to: "2024 Jul."
+    tags:
+      - Cloud Infrastructure
+      - Software Development
+      - Collaboration
+  - position: Python Software Engineer
+    company:
+      name: AGENTS.inc
+      link: "https://www.agents.inc"
+    description:
+      - Designed and implemented backend solutions for multiple smart agents using Python. This involved creating RESTful APIs, managing databases, and integrating third-party services.
+      - Worked on training and fine-tuning machine learning models. This included data preprocessing, feature engineering using Scikit-Learn library.
+      - Actively collaborated with cross-functional teams to integrate machine learning models into production environments.
+    from: "2019 Jun."
+    to: "2019 Dec."
+    tags:
+      - Python
+      - AI Solutions
+
+education:
+  - place:
+      name: Innopolis University
+      link: "https://innopolis.university/en/"
+    degree: "B.Sc."
+    major: Computer Science
+    track: Software Engineering
+    from: "2017"
+    to: "2021"
+
+hackathons:
+  - hackathon:
+      name: Statemind CTF
+      link: "https://ctf.statemind.io"
+    description: >
+      Successfully tackled complex puzzles related to smart contract security, Ethereum development, and blockchain vulnerabilities. Demonstrated expertise in ethical hacking and problem-solving in decentralized environments.
+    year: 2023
+  - hackathon:
+      name: ZeroNights HackQuest
+      link: "https://hackquest.zeronights.org"
+    description: >
+      Solved hacking challenges related to information security (reverse engineering, web, mobile hacking, penetration testing) and won prizes.
+    year: 2021
