@@ -1,7 +1,3 @@
-data "cloudflare_accounts" "all" {
-  name = "example account"
-}
-
 data "cloudflare_zone" "kochetov-dev" {
   name = "kochetov.dev"
 }
