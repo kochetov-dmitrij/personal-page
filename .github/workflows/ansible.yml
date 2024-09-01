@@ -15,11 +15,7 @@ jobs:
       - name: Save personal_page key to a local file
         run: |
           echo "${{ secrets.PERSONAL_PAGE_PRIVATE_KEY }}" > keys/personal_page
-          chmod 600 keys/ansible_rsa
-#      - name: Install ansible galaxy roles
-#        working-directory: ansible
-#        run: |
-#          ansible-galaxy install -r requirements.yml
+          chmod 600 keys/personal_page
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
