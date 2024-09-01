@@ -1,5 +1,7 @@
 # Deployment automation for my personal page
 
+## Hosted at https://kochetov.dev
+
 ## Terraform config for managing infra resources
 It uses `app.terraform.io` backend for storing the state and running commands. \
 Required tokens are stored in [tf variables](https://app.terraform.io/app/dkochetov/workspaces/personal-page/variables).
