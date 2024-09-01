@@ -153,8 +153,8 @@
           *#job.position*
           #link(job.company.link)[\@  #job.company.name] \
           #job.from – #job.to
-
       ]
+      #v(-0.5em)
       #par(
         justify: false,
         leading: eval(settings.paragraph.leading)
@@ -185,7 +185,32 @@
     ]
   }
 
+  = Projects
 
+  #{
+    for project in configuration.projects [
+      #par(
+        justify: true,
+        leading: eval(settings.paragraph.leading)
+      )[
+        #v(0.5em)
+        #block(spacing: 0.3em)[
+          #set text(
+            size: eval(settings.font.size.heading),
+            font: settings.font.general
+          )
+          - #{if "year" in project {project.year + " "}}#link(project.project.link)[#project.project.name]
+        ]
+        #par[
+          #set text(
+            size: eval(settings.font.size.description),
+            font: settings.font.general
+          )
+          #project.description
+        ]
+      ]
+    ]
+  }
 
   = Hackathons and CTFs
 
@@ -195,7 +220,8 @@
         justify: true,
         leading: eval(settings.paragraph.leading)
       )[
-        #par[
+        #v(0.5em)
+        #block(spacing: 0.3em)[
           #set text(
             size: eval(settings.font.size.heading),
             font: settings.font.general

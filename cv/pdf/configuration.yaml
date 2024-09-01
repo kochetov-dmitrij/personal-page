@@ -121,6 +121,15 @@ education:
     from: "2017"
     to: "2021"
 
+projects:
+  - project:
+      name: This hosted website with CV
+      link: "https://github.com/kochetov-dmitrij/personal-page"
+    description: >
+      Configured and deployed this website using Terraform, Ansible, Github Actions and PDF generator.
+
+
+
 hackathons:
   - hackathon:
       name: Statemind CTF
