@@ -2,19 +2,12 @@
 
 ![Example](images/example.png)
 
-To generate `main.pdf` and watch for live changes, run
-
-`make watch`
-
+To generate `main.pdf` and watch for live changes, run:
 ```bash
-________ Main content
-├── main.typ
-├── settings.yaml      # Spacing and font sizes
-└── configuration.yaml # Content
+make watch
+```
 
-________ Auxilary
-├── README.md
-├── main.pdf
-└── images
-   └── example.png
+To publish `main.pdf` to the server, run:
+```bash
+make release OUTPUT=dmitrii_kochetov_en1.pdf
 ```

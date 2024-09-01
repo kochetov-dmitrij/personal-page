@@ -18,10 +18,13 @@ skills:
   - name: DevOps
     items:
       - Docker
-      - Kubernetes Administration
+      - Kubernetes Administration (Rancher, RKE2)
       - Github Actions, Gitlab CI
       - Terraform
+      - Terragrunt
       - Ansible
+      - Helm
+      - ArgoCD
   - name: Scripting and Programming
     items:
       - GoLang
@@ -89,7 +92,7 @@ jobs:
       - Implemented DevOps best practices in the team to uphold code quality, delivery speed and reliability.
       - Optimised cloud costs by 20%.
     from: "2020 Jun."
-    to: "2024 Jul."
+    to: "2024 Aug."
     tags:
       - Cloud Infrastructure
       - Software Development
