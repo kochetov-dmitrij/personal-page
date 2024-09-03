@@ -33,6 +33,7 @@
       LinkedIn: #link(configuration.contacts.linkedin.url)[#configuration.contacts.linkedin.displayText] \
       GitHub: #link(configuration.contacts.github.url)[#configuration.contacts.github.displayText] \
       Website: #link(configuration.contacts.website.url)[#configuration.contacts.website.displayText] \
+      Telegram: #link(configuration.contacts.telegram.url)[#configuration.contacts.telegram.displayText] \
 
       #configuration.contacts.address
     ]

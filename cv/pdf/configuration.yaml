@@ -13,6 +13,9 @@ contacts:
   website:
     url: https://kochetov.dev
     displayText: kochetov.dev
+  telegram:
+    url: https://t.me/dmitrii_kochetov
+    displayText: "@dmitrii_kochetov"
 
 skills:
   - name: DevOps
