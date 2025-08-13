@@ -104,7 +104,6 @@
           size: eval(settings.font.size.description),
         )
         #set text(
-          // size: eval(settings.font.size.tags),
           font: settings.font.minor_highlight,
         )
         *#skill.name*
@@ -156,6 +155,19 @@
           #job.from – #job.to
       ]
       #v(-0.5em)
+      #{
+        if "brief" in job [
+          #par[
+            #set text(
+              size: eval(settings.font.size.description),
+              font: settings.font.minor_highlight,
+              style: "italic"
+            )
+            #job.brief
+          ]
+          #v(-0.3em)
+        ]
+      }
       #par(
         justify: false,
         leading: eval(settings.paragraph.leading)
@@ -170,19 +182,23 @@
           ]
         }
       ]
-      #par(
-        justify: true,
-        leading: eval(settings.paragraph.leading),
-      )[
-        #set text(
-          size: eval(settings.font.size.tags),
-          font: settings.font.minor_highlight
-        )
-        #{
-          let tag_line = job.tags.join(" • ")
-          tag_line
-        }
-      ]
+      #{
+        if "tags" in job and job.tags != none and job.tags.len() > 0 [
+          #par(
+            justify: true,
+            leading: eval(settings.paragraph.leading),
+          )[
+            #set text(
+              size: eval(settings.font.size.tags),
+              font: settings.font.minor_highlight
+            )
+            #{
+              let tag_line = job.tags.join(" • ")
+              tag_line
+            }
+          ]
+        ]
+      }
     ]
   }
 
@@ -202,6 +218,19 @@
           )
           - #{if "year" in project {project.year + " "}}#link(project.project.link)[#project.project.name]
         ]
+        #{
+          if "brief" in project [
+            #par[
+              #set text(
+                size: eval(settings.font.size.description),
+                font: settings.font.minor_highlight,
+                style: "italic"
+              )
+              #project.brief
+            ]
+            #v(-0.3em)
+          ]
+        }
         #par[
           #set text(
             size: eval(settings.font.size.description),
@@ -213,37 +242,41 @@
     ]
   }
 
-  = Hackathons and CTFs
-
   #{
-    for hack in configuration.hackathons [
-      #par(
-        justify: true,
-        leading: eval(settings.paragraph.leading)
-      )[
-        #v(0.5em)
-        #block(spacing: 0.3em)[
-          #set text(
-            size: eval(settings.font.size.heading),
-            font: settings.font.general
-          )
-          - #hack.year #link(hack.hackathon.link)[#hack.hackathon.name]
+    if configuration.hackathons != none [
+      = Hackathons and CTFs
+
+      #{
+        for hack in configuration.hackathons [
+          #par(
+            justify: true,
+            leading: eval(settings.paragraph.leading)
+          )[
+            #v(0.5em)
+            #block(spacing: 0.3em)[
+              #set text(
+                size: eval(settings.font.size.heading),
+                font: settings.font.general
+              )
+              - #hack.year #link(hack.hackathon.link)[#hack.hackathon.name]
+            ]
+            #par[
+              #set text(
+                size: eval(settings.font.size.description),
+                font: settings.font.general
+              )
+              #hack.description
+            ]
+          ]
         ]
-        #par[
-          #set text(
-            size: eval(settings.font.size.description),
-            font: settings.font.general
-          )
-          #hack.description
-        ]
-      ]
+      }
     ]
   }
 ]}
 
 #{
   grid(
-    columns: (3fr, 5fr),
+    columns: (4fr, 10fr),
     column-gutter: 3em,
     sidebarSection,
     mainSection,

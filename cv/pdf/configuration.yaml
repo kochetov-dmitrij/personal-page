@@ -47,10 +47,11 @@ skills:
       - Spark
   - name: Cloud Computing
     items:
-      - AWS
       - Google Cloud
+      - AWS
       - Azure
       - IBM Cloud
+      - Scaleway
   - name: Database Managment
     items:
       - PostgreSQL
@@ -58,6 +59,8 @@ skills:
       - Neo4j
       - Elasticsearch
       - Kafka
+      - HCP Vault
+      - Keycloak
   - name: Monitoring
     items:
       - ELK stack
@@ -65,13 +68,14 @@ skills:
       - Grafana
       - Loki
       - Alerts
+      - Sentry
   - name: Languages
     items:
       - English C1
       - Russian Native
 
 summary:
-  Skilled and dedicated DevOps Engineer with 5 years of experience in automating, optimizing, managing and securing mission-critical deployments in AWS, GCP, Azure and IBM clouds.
+  Skilled and dedicated DevOps Engineer with 6+ years of experience in automating, optimizing, managing and securing mission-critical deployments in AWS, GCP, Azure and IBM clouds.
   Proficient in CI/CD pipeline development, configuration management, and infrastructure as code (IaC). 
   Strong background in scripting and programming with tools such as Terraform, Ansible, Docker, and Kubernetes.
   Open to roles ranging from software engineering to infrastructure.
@@ -80,39 +84,64 @@ summary:
 jobs:
   - position: DevOps Engineer
     company:
+      name: Inktech
+      link: "https://inktech.org"
+    brief: "Fintech platform for payments"
+    description:
+      - Optimized Dockerfiles and CI/CD pipelines, achieving 35% faster deployment times and 50% build failures.
+      - Integrated HCP Vault for centralized secrets management, enhancing security compliance.
+      - Imported existing infrastructure to Terraform, reducing manual configuration errors by 80%.
+      - Established comprehensive monitoring and alerting systems with Prometheus, Grafana, and custom dashboards, achieving 99.9% uptime SLA.
+      - Set up automated security scanning in CI/CD pipeline, detecting vulnerabilities before production deployment.
+    from: "2024 Nov."
+    to: "2025 Aug."
+  - position: DevOps Engineer
+    company:
+      name: AGENTS.inc
+      link: "https://www.agents.inc"
+    brief: "Smart agents platform for business automation"
+    description:
+      - Migrated the company's infrastructure to Kubernetes, enabling seamless scaling of applications.
+      - Integrated ArgoCD for GitOps-based continuous deployment, enabling automated and declarative application deployments
+      - Implemented Infrastructure as Code using Terraform, making infrastructure changes traceable, repeatable and reducing manual errors.
+      - Streamlined developer workflows by automating environment provisioning, allowing developers to spin up remote isolated testing environments in minutes.
+    from: "2024 Jul."
+    to: "2024 Nov."
+  - position: DevOps Engineer
+    company:
       name: Schwarzthal Tech
       link: https://schwarzthal.tech
+    brief: "A KYC platform integrating and analyzing data from government registries across dozens of countries for enhanced due diligence"
     description:
-      - Responsible for maintaining and improving cloud infrastructure in multiple public clouds using IaC tools.
-      - Developing mission-critical microservices in Go and Python.
-      - Had some experience with Ruby, Java, JS codebases.
-      - Developed custom operators for K8s for optimising large scale crawling process.
-      - Managed large self-hosted databases (Mongodb, Neo4j, ElasticSearch).
-      - Managed data crawlers (Scrapy) and data pipelines (Airflow, Spark).
-      - Collaborated with cross-functional teams, including data scientists and software engineers.
-      - Mentored and supervised a team, including two former interns who transitioned to full-time roles, fostering their growth and enhancing team productivity.
-      - Established comprehensive monitoring and alerting solutions, significantly improving system reliability and minimizing downtime.
-      - Implemented DevOps best practices in the team to uphold code quality, delivery speed and reliability.
-      - Optimised cloud costs by 20%.
+      - Led cloud infrastructure management across multiple public cloud platforms (AWS, GCP, Azure, IBM) using IaC tools.
+      - Developed and maintained mission-critical microservices in Go and Python, achieving 99.9% uptime SLA
+      - Architected and deployed custom Kubernetes operators that optimized large-scale data crawling processes.
+      - Managed large self-hosted databases (MongoDB, Neo4j, Elasticsearch) with 5TB+ data volume, ensuring high availability.
+      - Orchestrated data pipelines processing 10M+ records daily using Apache Spark and Airflow, reducing processing time by 50%.
+      - Built comprehensive monitoring and alerting systems covering 20+ services, reducing incident response time from 10 hours to 10 minutes.
+      - Implemented DevOps best practices in the team, reducing deployment failures by 90% and increasing release frequency by 3x.
+      - Achieved 20% cloud cost optimization through infrastructure rightsizing and autoscaling, saving $10K+ annually.
+      - Mentored 2 interns to full-time positions, fostering their growth and enhancing team productivity.
     from: "2020 Jun."
     to: "2024 Aug."
-    tags:
-      - Cloud Infrastructure
-      - Software Development
-      - Collaboration
+    # tags:
+    #   - Cloud Infrastructure
+    #   - Software Development
+    #   - Collaboration
   - position: Python Software Engineer
     company:
       name: AGENTS.inc
       link: "https://www.agents.inc"
+    brief: "Smart agents platform for business automation"
     description:
       - Designed and implemented backend solutions for multiple smart agents using Python. This involved creating RESTful APIs, managing databases, and integrating third-party services.
       - Worked on training and fine-tuning machine learning models. This included data preprocessing, feature engineering using Scikit-Learn library.
       - Actively collaborated with cross-functional teams to integrate machine learning models into production environments.
     from: "2019 Jun."
     to: "2019 Dec."
-    tags:
-      - Python
-      - AI Solutions
+    # tags:
+    #   - Python
+    #   - AI Solutions
 
 education:
   - place:
@@ -126,23 +155,24 @@ education:
 
 projects:
   - project:
-      name: This hosted website with CV
+      name: This CV
       link: "https://github.com/kochetov-dmitrij/personal-page"
+    brief: "Personal portfolio website with automated deployment pipeline"
     description: >
-      Configured and deployed this website using Terraform, Ansible, Github Actions and PDF generator.
+      - Configured and deployed this website using Terraform, Ansible, Github Actions and PDF generator.
 
 
 
 hackathons:
-  - hackathon:
-      name: Statemind CTF
-      link: "https://ctf.statemind.io"
-    description: >
-      Successfully tackled complex puzzles related to smart contract security, Ethereum development, and blockchain vulnerabilities. Demonstrated expertise in ethical hacking and problem-solving in decentralized environments.
-    year: 2023
-  - hackathon:
-      name: ZeroNights HackQuest
-      link: "https://hackquest.zeronights.org"
-    description: >
-      Solved hacking challenges related to information security (reverse engineering, web, mobile hacking, penetration testing) and won prizes.
-    year: 2021
+  # - hackathon:
+  #     name: Statemind CTF
+  #     link: "https://ctf.statemind.io"
+  #   description: >
+  #     Successfully tackled complex puzzles related to smart contract security, Ethereum development, and blockchain vulnerabilities. Demonstrated expertise in ethical hacking and problem-solving in decentralized environments.
+  #   year: 2023
+  # - hackathon:
+  #     name: ZeroNights HackQuest
+  #     link: "https://hackquest.zeronights.org"
+  #   description: >
+  #     Solved hacking challenges related to information security (reverse engineering, web, mobile hacking, penetration testing) and won prizes.
+  #   year: 2021
