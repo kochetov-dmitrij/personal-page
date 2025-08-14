@@ -78,7 +78,7 @@ summary:
   Skilled and dedicated DevOps Engineer with 6+ years of experience in automating, optimizing, managing and securing mission-critical deployments in AWS, GCP, Azure and IBM clouds.
   Proficient in CI/CD pipeline development, configuration management, and infrastructure as code (IaC). 
   Strong background in scripting and programming with tools such as Terraform, Ansible, Docker, and Kubernetes.
-  Open to roles ranging from software engineering to infrastructure.
+  Open to roles ranging from software engineering to infrastructure.
 
 
 jobs:
@@ -88,7 +88,7 @@ jobs:
       link: "https://inktech.org"
     brief: "Fintech platform for payments"
     description:
-      - Optimized Dockerfiles and CI/CD pipelines, achieving 35% faster deployment times and 50% build failures.
+      - Optimized Dockerfiles and CI/CD pipelines, achieving 35% faster deployment times and 50% reduction in build failures.
       - Integrated HCP Vault for centralized secrets management, enhancing security compliance.
       - Imported existing infrastructure to Terraform, reducing manual configuration errors by 80%.
       - Established comprehensive monitoring and alerting systems with Prometheus, Grafana, and custom dashboards, achieving 99.9% uptime SLA.
